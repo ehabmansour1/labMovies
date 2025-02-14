@@ -1,0 +1,31 @@
+.search-container {
+  max-width: 800px;
+  margin: 48px auto;
+  position: relative;
+  display: flex;
+  gap: 20px;
+  padding: 0 32px;
+}
+
+.search-bar {
+  flex: 1;
+  padding: 20px 28px;
+  border: 2px solid rgba(255, 169, 122, 0.15);
+  border-radius: 16px;
+  background: rgba(30, 41, 59, 0.6);
+  color: white;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  outline: none;
+  backdrop-filter: blur(8px);
+}
+
+.search-bar:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 0 4px rgba(255, 169, 122, 0.15);
+  background: rgba(51, 65, 85, 0.8);
+}
+
+.search-bar::placeholder {
+  color: #94a3b8;
+}

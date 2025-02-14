@@ -1,0 +1,116 @@
+.not-found {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--back-color), #1a1a1a);
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+}
+
+.forbidden-sign {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 2rem;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 0;
+  color: var(--main-color);
+  text-shadow: 0 0 10px rgba(255, 169, 122, 0.5);
+  animation: glitch 3s infinite;
+}
+
+.message {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  opacity: 0.8;
+}
+
+.glitch-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  animation: glitchBg 8s infinite;
+}
+
+@keyframes glitch {
+  2%,
+  64% {
+    transform: translate(2px, 0) skew(0deg);
+  }
+  4%,
+  60% {
+    transform: translate(-2px, 0) skew(0deg);
+  }
+  62% {
+    transform: translate(0, 0) skew(5deg);
+  }
+}
+
+@keyframes glitchBg {
+  0% {
+    background: transparent;
+  }
+  1% {
+    background: rgba(255, 169, 122, 0.1);
+  }
+  1.1% {
+    background: transparent;
+  }
+  50% {
+    background: transparent;
+  }
+  51% {
+    background: rgba(255, 169, 122, 0.1);
+  }
+  51.1% {
+    background: transparent;
+  }
+}
+
+.back-button {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background: transparent;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.back-button:hover {
+  background: var(--main-color);
+  color: var(--text-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 169, 122, 0.4);
+}
